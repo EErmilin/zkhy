@@ -1,0 +1,39 @@
+.form {
+    display: grid;
+    gap: 15px;
+    background-color: #D2D8E3;
+    padding: 61px 90px 65px;
+}
+
+.wrp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.input {
+    &_label {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.59px;
+        color: #778AA9;
+        margin-bottom: 13px;
+    }
+}
+
+.time {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+}
+
+.calendar {
+    padding: 63px 90px;
+}
+
+.text {
+    margin: 35px 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+}

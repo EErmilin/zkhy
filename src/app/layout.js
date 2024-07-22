@@ -1,7 +1,19 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header/Header";
+import { AntdRegistry } from '@ant-design/nextjs-registry';
+import Sider from "@/components/Sider/Sider";
+import styles from "./layout.module.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+import { Rubik } from 'next/font/google'
+import QuestionForm from "@/components/QuestionForm/QuestionForm";
+import Logos from "@/components/Logos/Logos";
+import Footer from "@/components/Footer/Footer";
+
+const rubik = Rubik({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +23,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={[styles.wrp, rubik.className].join(" ")}>
+        <div className={styles.content}>
+          <AntdRegistry>
+            <Header />
+            {children}
+            <QuestionForm />
+            <Logos />
+            <Header bg={'#E4E9F0'}/>
+            <Footer />
+          </AntdRegistry>
+        </div>
+
+        <Sider />
+      </body>
     </html>
   );
 }

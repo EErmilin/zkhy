@@ -1,0 +1,50 @@
+.wrp {
+    background-color: #EEF3F9;
+    padding: 40px 0 53px 0;
+}
+
+.content {
+    max-width: 1410px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+
+
+    &>div {
+        &:last-child {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: end;
+        }
+    }
+}
+
+.btn {
+    width: 280px;
+    margin-bottom: 34px;
+    height: 60px;
+}
+
+.text {
+    color: #778AA9;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 35px;
+    letter-spacing: 0.01em;
+}
+
+.links {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 35px;
+    letter-spacing: 0.01em;
+    color: #2B2B2B;
+}
+
+.policity{
+    line-height: 35px;
+    display: block;
+    color: #778AA9;
+    text-decoration: underline;
+}
