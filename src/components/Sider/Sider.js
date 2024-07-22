@@ -9,9 +9,11 @@ import Image from 'next/image';
 import counterIcon from "../../assets/svg/menu-counter.svg";
 import changeIcon from "../../assets/svg/menu-change.svg";
 import installIcon from "../../assets/svg/menu-install.svg";
+import counterWhiteIcon from "../../assets/svg/menu-counter.svg";
+import changeWhiteIcon from "../../assets/svg/menu-change.svg";
+import installWhiteIcon from "../../assets/svg/menu-install.svg";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
-import useWindowSize from '@/app/hooks/useWindowSize';
 
 
 
@@ -19,27 +21,29 @@ const linksArray = [
     {
         title: 'Поверка счетчиков',
         url: '/',
-        icon: counterIcon
+        icon: counterIcon,
+        activeIcon: counterWhiteIcon
     },
     {
         title: 'Замена счетчиков',
         url: '/replacement',
-        icon: changeIcon
+        icon: changeIcon,
+        activeIcon: changeWhiteIcon
     },
     {
         title: 'Установка счетчиков',
         url: '/installation',
-        icon: installIcon
+        icon: installIcon,
+        activeIcon: installWhiteIcon
     },
 ]
 
 export default function Sider({ isOpen, toggleSidebar }) {
-    const { width, height } = useWindowSize();
     const pathname = usePathname()
     const templateLinks = useMemo(() => {
         return linksArray.map((item, key) =>
             <Link className={[styles.link, pathname === item.url ? styles.link_active : ""].join(" ")} href={item.url} key={key} onClick={isOpen && toggleSidebar}>
-                <Image src={item.icon} />{item.title}</Link>)
+                <Image src={pathname === item.url ? item.activeIcon : item.icon} />{item.title}</Link>)
 
     }, [pathname, isOpen])
 

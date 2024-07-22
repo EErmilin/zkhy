@@ -9,6 +9,8 @@ import { Rubik } from 'next/font/google'
 import QuestionForm from "@/components/QuestionForm/QuestionForm";
 import Logos from "@/components/Logos/Logos";
 import Footer from "@/components/Footer/Footer";
+import Questions from "@/components/Questions/Questions";
+import RequestForm from "@/components/RequestForm/RequestForm";
 
 const rubik = Rubik({
   weight: '400',
@@ -24,17 +26,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={[styles.wrp, rubik.className].join(" ")}>
-        <div className={styles.content}>
-          <AntdRegistry>
+        <AntdRegistry>
+
+          <div className={styles.content}>
             <Header />
-            {children
-            }
+            {children}
+            <RequestForm />
+            <Questions />
             <QuestionForm />
             <Logos />
-            <Header bg={'#E4E9F0'} isShowMenu={false} isShowPhone={true}/>
+            <Header bg={'#E4E9F0'} isShowMenu={false} isShowPhone={true} />
             <Footer />
-          </AntdRegistry>
-        </div>
+          </div>
+        </AntdRegistry>
       </body>
     </html>
   );

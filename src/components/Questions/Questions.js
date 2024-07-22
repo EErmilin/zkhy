@@ -47,7 +47,7 @@ export default function Questions({ type }) {
     },
   ];
 
-  return <div>
+  return <div className={styles.container}>
     <h3 className={styles.title}>Ответы на частые вопросы</h3>
     <Collapse defaultActiveKey={['1']} ghost items={items} accordion onChange={(e) => console.log(e)} expandIconPosition="right" />
   </div>

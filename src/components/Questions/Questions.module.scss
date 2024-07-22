@@ -1,3 +1,18 @@
-.title{
+.title {
     margin-bottom: 25px;
+}
+
+.container {
+    max-width: 1338px;
+    padding: 0 19px;
+    margin: auto;
+    margin-top: 50px;
+
+    @media(min-width: 1400px) {
+        margin-top: 80px;
+    }
+
+    @media(min-width: 1920px) {
+        max-width: 1448px;
+    }
 }

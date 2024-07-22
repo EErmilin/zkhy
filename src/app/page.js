@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
 import Form from "@/components/Form/Form";
-import Link from "next/link";
 import Counters from "@/components/Counters/Counters";
 
 import rctIcon from "../assets/svg/rct-gray.svg";
@@ -16,11 +15,7 @@ import cardIcon from "../assets/svg/card.svg";
 import services1Icon from "../assets/svg/services/services1.svg";
 import services2Icon from "../assets/svg/services/services2.svg";
 import services3Icon from "../assets/svg/services/services3.svg";
-import Questions from "@/components/Questions/Questions";
-
-
-
-const regions = ['ЦАО', 'ЗелАО', 'НАО', 'ВАО', 'ЗАО', 'САО', 'СВАО', 'СЗАО', 'ТАО', 'ЮВАО', 'ЮЗАО', 'ЮАО', 'МО']
+import Metro from "@/components/Regions/Metro";
 
 const prices = [
   {
@@ -51,10 +46,6 @@ const prices = [
 
 
 export default function Home() {
-
-  const renderRegions = () => {
-    return regions.map((item, key) => <Link className={styles.region_btn} href={'/verification'} key={key}>{item}</Link>)
-  }
 
   const renderPrice = () => {
     return prices.map((item, key) => <div
@@ -155,15 +146,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.region}>
-        <div className={styles.region_wrp}>
-          <div className={styles.region_title}>Осуществляем поверку счетчиков воды во всех округах Москвы
-            и районах Московской области</div>
-          <div className={styles.region_btn_wrp}>
-            {renderRegions()}
-          </div>
-        </div>
-      </div>
+      <Metro />
       <div className={styles.container}>
         <Counters />
       </div>
@@ -174,11 +157,6 @@ export default function Home() {
             {renderPrice()}
           </div>
         </div>
-      </div>
-      <div className={styles.container}>
-        {//    <RequestForm />
-        }
-        <Questions />
       </div>
     </div>
   );

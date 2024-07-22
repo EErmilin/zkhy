@@ -1,15 +1,24 @@
 .top {
     display: grid;
-    grid-template-columns: 1fr 570px;
-    gap: 34px;
-    max-width: 1300px;
-    @media(min-width: 1920px) {
-        max-width: 1410px;
+    gap: 25px;
+    max-width: 1338px;
+    padding: 26px 19px 124px;
+
+    @media(min-width: 1400px) {
+        display: flex;
+        justify-content: space-between;
+        gap: 69px;
+        padding: 83px 19px 214px;
     }
+
+    @media(min-width: 1920px) {
+        max-width: 1448px;
+    }
+
     margin: auto;
 
     &_bg {
-        padding: 83px 0 214px;
+
         background-color: #F0F2F5;
         background-repeat: no-repeat;
         background-image: url("../../assets/svg/bg-main.svg");
@@ -19,71 +28,122 @@
 
 .container {
     display: grid;
-    gap: 80px;
-
-    max-width: 1300px;
-    @media(min-width: 1920px) {
-        max-width: 1410px;
-    }
+    gap: 50px;
+    max-width: 1338px;
+    padding: 0 19px;
     margin: auto;
+
+    @media(min-width: 1400px) {
+        gap: 80px;
+    }
+
+    @media(min-width: 1920px) {
+        max-width: 1448px;
+    }
+
+
 }
 
 .title {
-    font-size: 45px;
+    font-size: 30px;
     font-weight: 600;
-    line-height: 53.33px;
+    line-height: 35.55px;
+
+    @media(min-width: 1400px) {
+        font-size: 45px;
+        line-height: 53.33px;
+    }
 }
 
 .sub_title {
-
     font-weight: 400;
 }
 
 .text {
     font-size: 17px;
     line-height: 25px;
-    margin-top: 30px;
+    margin-top: 11px;
     max-width: 620px;
+
+    @media(min-width: 1400px) {
+        margin-top: 30px;
+    }
 }
 
 .stats {
     &_wrp {
         display: flex;
-        margin-top: 78px;
         gap: 58px;
+        margin-top: 20px;
+
+        @media(min-width: 1400px) {
+            margin-top: 70px;
+        }
+
+        @media(min-width: 1920px) {
+            margin-top: 78px;
+        }
     }
 
     &_value {
         color: #FD4D4D;
-        font-weight: 700;
-        font-size: 100px;
         white-space: nowrap;
+        font-size: 45px;
+        font-weight: 700;
+
+        @media(min-width: 1400px) {
+            font-weight: 700;
+            font-size: 100px;
+        }
     }
 
     &_title {
         white-space: nowrap;
-        font-size: 45px;
-        font-weight: 300;
+        font-size: 15px;
+        font-weight: 400;
+
+        @media(min-width: 1920px) {
+            font-size: 45px;
+            font-weight: 300;
+        }
     }
 }
 
 .rct {
+    display: none;
     width: 111.28px;
     height: 70.54px;
     border-radius: 10px;
     box-shadow: 0px 0px 30px 0px #00000033;
     background: center/cover no-repeat url("../../assets/img/rct.png");
+
+    @media(min-width: 1400px) {
+        display: block;
+    }
 }
 
 .info {
-    margin-top: -125px;
+
     display: flex;
+    flex-wrap: wrap;
+    margin-top: -75px;
+
+    @media(min-width: 768px) {
+        flex-wrap: nowrap;
+    }
+
+    @media(min-width: 1400px) {
+        margin-top: -125px;
+    }
+
     gap: 30px;
     justify-content: space-between;
 
     &_item {
         background-color: #778AA9;
-        width: 450px;
+        margin: auto;
+        width: 100%;
+
         height: 250px;
         border-radius: 10px;
         background-repeat: no-repeat;
@@ -97,6 +157,10 @@
         text-align: left;
         color: #FFFFFF;
         padding: 29px 19px;
+
+        @media(min-width: 1400px) {
+            max-width: 450px;
+        }
 
         &_title {
             font-weight: 600;
@@ -114,7 +178,11 @@
 
     &_wrp {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+
+        @media(min-width: 1400px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
         gap: 30px;
 
         &>div {
@@ -128,7 +196,7 @@
         align-items: center;
         grid-template-columns: 50px 1fr;
         gap: 25px;
-        max-width: 810px;
+
         min-height: 110px;
         border: solid 1px #D2D8E3;
         border-radius: 7px;
@@ -139,15 +207,20 @@
 .includes {
 
     &_wrp {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        flex-wrap: wrap;
         gap: 30px;
         margin-top: 30px;
+        justify-content: center;
+
+        @media(min-width: 1400px) {
+            flex-wrap: nowrap;
+        }
     }
 
     &_item {
         background-color: #275AAE;
-        width: 330px;
+        width: 100%;
         height: 160px;
         border-radius: 10px;
         background-repeat: no-repeat;
@@ -176,8 +249,12 @@
 .price {
     &_wrp {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        gap: 30px;
         margin-top: 35px;
+
+        @media(min-width: 1400px) {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
     &_title {
@@ -221,10 +298,8 @@
         background-size: contain;
         padding: 35px 10px;
         background-color: rgba(39, 90, 174, 0.1);
-        width: 690px;
         height: 200px;
         border-radius: 7px;
-
 
         &:last-child {
             padding: 35px 16px;
@@ -234,14 +309,9 @@
             margin-top: 9px;
         }
 
-
         &_text {
             display: flex;
             gap: 20px;
         }
-
-
-
-
     }
 }

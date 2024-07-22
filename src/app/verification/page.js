@@ -8,8 +8,7 @@ import locationIcon from "../../assets/svg/location.svg";
 import insuranceIcon from "../../assets/svg/insurance.svg";
 import timingIcon from "../../assets/svg/timing.svg";
 import Counters from "@/components/Counters/Counters";
-import Questions from "@/components/Questions/Questions";
-
+import Metro from "@/components/Regions/Metro";
 
 export default function Home() {
 
@@ -31,7 +30,7 @@ export default function Home() {
               <div className={styles.rct} />
             </div>
           </div>
-          <Form type={'verification'}/>
+          <Form type={'verification'} />
         </div>
       </div>
       <div className={styles.container}>
@@ -58,6 +57,9 @@ export default function Home() {
           </div>
         </div>
         <Counters type={"verification"} />
+      </div>
+      <Metro isShowMetro={true} />
+      <div className={styles.container}>
         <div className={styles.price}>
           <h3>Стоимость замены счетчиков в Москве</h3>
           <div className={styles.price_wrp}>
@@ -83,7 +85,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Questions />
       </div>
     </div>
   );

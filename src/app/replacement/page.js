@@ -59,7 +59,7 @@ export default function Home() {
               <div className={styles.rct} />
             </div>
           </div>
-          <Form type={'replacement'}/>
+          <Form type={'replacement'} />
         </div>
       </div>
       <div className={styles.container}>
@@ -157,10 +157,6 @@ export default function Home() {
         <div className={styles.request}>
           <h3>Выберите подходящую дату и время приема мастера</h3>
           <div>Заполните заявку сейчас и ждите специалиста сегодня или завтра. Выезжаем в течение суток после обращения в удобное время. Результаты будут во ФГИС Аршин на следующий день.</div>
-        </div>
-        <div className={styles.request}>
-          <h3>Ответы на частые вопросы</h3>
-          <div>Ответы на частые вопросы</div>
         </div>
       </div>
     </div>

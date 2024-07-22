@@ -23,7 +23,7 @@ export default function QuestionForm() {
                 </div>
                 <div className={styles.input}>
                     <div className={styles.input_label}>Телефон</div>
-                    <Input></Input>
+                    <Input value={'+7 ('}></Input>
                 </div>
                 <button className={styles.btn}>Получить консультацию</button>
 

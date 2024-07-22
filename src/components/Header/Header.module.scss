@@ -1,18 +1,18 @@
 .wrp {
     display: flex;
-    max-width: 1300px;
+    max-width: 1338px;
     margin: auto;
     align-items: center;
     justify-content: space-between;
     font-size: 15px;
-    padding: 20px 20px 23px;
+    padding: 20px 19px 23px;
 
-    @media(min-width: 1024px) {
-        padding: 48px 0 44px;
+    @media(min-width: 1400px) {
+        padding: 48px 19px 44px;
     }
 
     @media(min-width: 1920px) {
-        max-width: 1410px;
+        max-width: 1448px;
     }
 
     z-index: 2;
@@ -25,7 +25,7 @@
     background: center/cover no-repeat url("../../assets/svg/burger.svg");
     cursor: pointer;
 
-    @media(min-width: 1024px) {
+    @media(min-width: 1400px) {
         display: none;
     }
 }
@@ -36,14 +36,19 @@
     background: center/cover no-repeat url("../../assets/svg/cross.svg");
     cursor: pointer;
 
-    @media(min-width: 1024px) {
+    @media(min-width: 1400px) {
         display: none;
     }
 }
 
 .container {
-   background-color: #F0F2F5;
-   box-shadow: 10px 5px 5px red;
+    background-color: #F0F2F5;
+    box-shadow: 0px 4px 10px 0px #0000000D;
+    position: relative;
+
+    @media(min-width: 1400px) {
+        box-shadow: none;
+    }
 }
 
 .logo {
@@ -96,7 +101,7 @@
         align-items: center;
         display: none;
 
-        @media(min-width: 1024px) {
+        @media(min-width: 1400px) {
             display: grid;
         }
     }
@@ -148,7 +153,7 @@
 .hide {
     display: none;
 
-    @media(min-width: 1024px) {
+    @media(min-width: 1400px) {
         display: block;
     }
 }
@@ -156,8 +161,8 @@
 .phone {
     display: flex;
 
-    &_btn{
-        @media(min-width: 1024px) {
+    &_btn {
+        @media(min-width: 1400px) {
             display: none;
         }
     }
