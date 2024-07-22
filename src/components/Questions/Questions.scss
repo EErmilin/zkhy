@@ -1,6 +1,3 @@
-.ant-collapse-content-box {
-    padding-left: 0 !important;
-}
 
 .ant-collapse-header {
     padding-left: 0 !important;
@@ -12,3 +9,9 @@
     line-height: 24px;
     letter-spacing: 0.01em;
 }
+
+.ant-collapse-content-box{
+    background-color: #F9FAFD;
+    padding: 19px 16px !important;
+    border-radius: 7px;
+  }

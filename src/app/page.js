@@ -11,12 +11,13 @@ import garant3Icon from "../assets/svg/garant/3.svg";
 import garant4Icon from "../assets/svg/garant/4.svg";
 import garant5Icon from "../assets/svg/garant/5.svg";
 import garant6Icon from "../assets/svg/garant/6.svg";
+import cardIcon from "../assets/svg/card.svg";
 
 import services1Icon from "../assets/svg/services/services1.svg";
 import services2Icon from "../assets/svg/services/services2.svg";
 import services3Icon from "../assets/svg/services/services3.svg";
 import Questions from "@/components/Questions/Questions";
-import RequestForm from "@/components/RequestForm/RequestForm";
+
 
 
 const regions = ['ЦАО', 'ЗелАО', 'НАО', 'ВАО', 'ЗАО', 'САО', 'СВАО', 'СЗАО', 'ТАО', 'ЮВАО', 'ЮЗАО', 'ЮАО', 'МО']
@@ -103,11 +104,22 @@ export default function Home() {
           <div className={styles.certificates}>
             <h3>Сертификаты</h3>
             <p className={styles.certificates_text}>ЖКХ «Управление» оказывает услуги по установке, поверке, замене и обслуживанию счетчиков воды, а также выполняет широкий спектр сантехнических работ. Работая с 2016 года в Москве мы накопили бесценный опыт решения задач любой сложности, укомплектовали штат лучшими мастерами, выработали четкую ценовую политику.</p>
-            <ul>
+            <div className={styles.discount}>
+              <Image src={cardIcon} width={327} />
+              <div>
+                <div className={styles.discount_title}>Скидка 5%
+                  <div className={styles.discount_sub_title}>на замену счетчиков воды</div>
+                </div>
+                <div className={styles.discount_text}>Скидка предоставляется обладателям социальной карты москвича</div>
+                <button>Получить скидку</button>
+              </div>
+            </div>
+
+            {/*            <ul>
               <li><Link href={''}>Приложение к аттестату аккредитации</Link></li>
               <li><Link href={''}>Аттестат Аккредитации RA.RU.311893</Link></li>
               <li><Link href={''}>Договор страхования гражданской ответственности</Link></li>
-            </ul>
+            </ul> */}
           </div>
           <div className={styles.garant}>
             <div className={styles.garant_title}>Мы гарантируем</div>
@@ -145,7 +157,7 @@ export default function Home() {
       </div>
       <div className={styles.region}>
         <div className={styles.region_wrp}>
-          <div className={styles.region_title}>Осуществляем поверку счетчиков воды во всех округах Москвы <br />
+          <div className={styles.region_title}>Осуществляем поверку счетчиков воды во всех округах Москвы
             и районах Московской области</div>
           <div className={styles.region_btn_wrp}>
             {renderRegions()}
@@ -164,7 +176,8 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.container}>
-        <RequestForm />
+        {//    <RequestForm />
+        }
         <Questions />
       </div>
     </div>

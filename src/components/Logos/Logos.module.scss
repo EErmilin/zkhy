@@ -1,8 +1,14 @@
-.wrp{
+.wrp {
     max-width: 1230px;
     margin: 80px auto;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-   row-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+   &>img{
+    margin: auto;
+   }
 
+    @media(min-width: 756px) {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }

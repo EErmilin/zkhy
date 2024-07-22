@@ -27,15 +27,14 @@ export default function RootLayout({ children }) {
         <div className={styles.content}>
           <AntdRegistry>
             <Header />
-            {children}
+            {children
+            }
             <QuestionForm />
             <Logos />
-            <Header bg={'#E4E9F0'}/>
+            <Header bg={'#E4E9F0'} isShowMenu={false} isShowPhone={true}/>
             <Footer />
           </AntdRegistry>
         </div>
-
-        <Sider />
       </body>
     </html>
   );

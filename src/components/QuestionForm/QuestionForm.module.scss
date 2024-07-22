@@ -10,15 +10,20 @@
 }
 
 .data {
-    display: flex;
+    display: grid;
     margin-bottom: 23px;
     gap: 30px;
+    @media(min-width: 1024px) {
+        display: flex;
+    }
 }
 
 .input {
-    max-width: 400px;
-    width: 100%;
 
+    width: 100%;
+    @media(min-width: 1024px) {
+        max-width: 400px;
+    }
     &_label {
         font-size: 14px;
         font-weight: 600;
@@ -41,5 +46,8 @@
 }
 
 .btn {
-    width: 370px;
+
+    @media(min-width: 1024px) {
+        width: 370px;
+    }
 }

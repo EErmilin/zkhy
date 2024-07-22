@@ -1,21 +1,29 @@
 .wrp {
     background-color: #EEF3F9;
-    padding: 40px 0 53px 0;
+    padding: 40px 19px 53px;
 }
 
 .content {
-    max-width: 1410px;
+    max-width: 1448px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    justify-content: center;
+
+    @media(min-width: 756px) {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
 
 
     &>div {
         &:last-child {
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
-            text-align: end;
+            text-align: center;
+            @media(min-width: 756px) {
+                align-items: flex-end;
+                text-align: end;
+            }
         }
     }
 }
@@ -40,9 +48,14 @@
     line-height: 35px;
     letter-spacing: 0.01em;
     color: #2B2B2B;
+    display: none;
+
+    @media(min-width: 756px) {
+        display: block;
+    }
 }
 
-.policity{
+.policity {
     line-height: 35px;
     display: block;
     color: #778AA9;

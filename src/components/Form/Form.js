@@ -47,7 +47,7 @@ export default function Form({ type }) {
     };
 
     return <form className={styles.form}>
-        <h3>{title}
+        <h3 className={styles.title}>{title}
             <div className={styles.sub_title}>во всех округах Москвы</div>
         </h3>
 
