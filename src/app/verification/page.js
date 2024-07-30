@@ -9,6 +9,7 @@ import insuranceIcon from "../../assets/svg/insurance.svg";
 import timingIcon from "../../assets/svg/timing.svg";
 import Counters from "@/components/Counters/Counters";
 import Metro from "@/components/Regions/Metro";
+import ButtonDefault from "../../components/ButtonDefault/ButtonDefault";
 
 export default function Home() {
 
@@ -71,7 +72,7 @@ export default function Home() {
                   <div className={styles.price_sum}>от <span>400</span> <span>₽</span></div>
                 </div>
               </div>
-              <button className={styles.price_btn}>Заказать</button>
+              <ButtonDefault className={styles.price_btn}>Заказать</ButtonDefault>
             </div>
             <div className={styles.price_item}>
               <div className={styles.price_item_text}>
@@ -81,7 +82,7 @@ export default function Home() {
                   <div className={styles.price_sum}><span>3 700</span> <span>₽</span></div>
                 </div>
               </div>
-              <button className={styles.price_btn}>Заказать</button>
+              <ButtonDefault className={styles.price_btn}>Заказать</ButtonDefault>
             </div>
           </div>
         </div>

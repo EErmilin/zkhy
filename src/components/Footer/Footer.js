@@ -2,6 +2,7 @@
 import React from 'react';
 import styles from './Footer.module.scss'
 import Link from 'next/link';
+import ButtonDefault from '../ButtonDefault/ButtonDefault';
 
 const Footer = () => (
 
@@ -24,7 +25,7 @@ const Footer = () => (
                 <li>- Контакты</li>
             </ul>
             <div className={styles.request}>
-                <button type="button" className={styles.btn}>Оставить заявку</button>
+                <ButtonDefault type="button" className={styles.btn}>Оставить заявку</ButtonDefault>
                 <p className={styles.text}>
                     <Link href={""} className={styles.policity}>Политика конфиденциальности</Link>
                     © 2016-2023 ЖКХ «Управление»

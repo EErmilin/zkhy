@@ -9,11 +9,12 @@
 
     @media(min-width: 1400px) {
         max-width: 480px;
-        padding: 23px 30px 30px;
+        padding: 15px 20px 20px;
     }
 
     @media(min-width: 1920px) {
         max-width: 570px;
+        padding: 23px 30px 30px;
     }
 
 
@@ -22,12 +23,14 @@
 .title {
     font-size: 20px;
     font-weight: 600;
-    line-height: 23.7px;
 
     @media(min-width: 1400px) {
+        font-size: 25px;
+
+    }
+    @media(min-width: 1920px) {
         font-size: 30px;
-        font-weight: 600;
-        line-height: 35.55px;
+
     }
 }
 
@@ -44,6 +47,16 @@
 .select {
     width: 100%;
     min-height: 50px;
+
+    &>span {
+        &:after {
+            display: flex;
+            content: '';
+            width: 30px;
+            height: 30px;
+            background: center/cover no-repeat url("../../assets/svg/arrow-red.svg");
+        }
+    }
 
     &_label {
         font-size: 13px;
@@ -96,13 +109,16 @@
 
 .bottom {
     margin-top: 20px;
-    display: grid;
-    gap: 41px;
-
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     font-size: 13px;
+    gap: 20px;
 
     @media(min-width: 1400px) {
         grid-template-columns: 1fr 1fr;
+        flex-direction: row;
+        gap: 0;
     }
 
 
@@ -134,18 +150,42 @@
 .data {
     background-color: #D2D8E3;
     border-radius: 5px;
-    padding: 20px;
+    padding: 14px 9px;
+
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 15px;
 
     @media(min-width: 1400px) {
+        width: 190px;
+
+    }
+
+    @media(min-width: 1920px) {
         width: 240px;
+        padding: 20px;
     }
 }
 
 .checkbox {
     font-size: 10px;
-    line-height: 11.85px;
+    line-height: 11.85px !important;
+
+    &>a {
+        text-decoration: underline;
+    }
+}
+
+.btn {
+    font-size: 13px;
+    font-weight: 400;
+
+    &_wrp {
+        width: 172px;
+
+        @media(min-width: 1920px) {
+            width: 200px;
+        }
+    }
 }

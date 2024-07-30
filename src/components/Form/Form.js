@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './Form.module.scss'
 import { Checkbox, Input, Select } from 'antd';
 import Link from 'next/link';
+import ButtonDefault from '../ButtonDefault/ButtonDefault';
 
 
 
@@ -79,10 +80,10 @@ export default function Form({ type }) {
                 </div>
             </div>
             <div className={styles.data}>
-                <Input className={styles.input}></Input>
-                <Input className={styles.input}></Input>
-                <button>Получить консультацию</button>
-                <Checkbox><span className={styles.checkbox}>Даю <Link href={""} className={styles.checkbox}>согласие</Link> на обработку данных</span></Checkbox>
+                <Input className={styles.input} placeholder='Введите ваше имя'></Input>
+                <Input className={styles.input} value={'+7 ('}></Input>
+                <ButtonDefault classNameTitle={styles.btn} className={styles.btn_wrp}>Получить консультацию</ButtonDefault>
+                <Checkbox className={styles.checkbox}><span className={styles.checkbox}>Даю <Link href={""} className={styles.checkbox}>согласие</Link> на обработку данных</span></Checkbox>
             </div>
         </div>
     </form>

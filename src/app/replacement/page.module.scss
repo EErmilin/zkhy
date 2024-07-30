@@ -7,7 +7,6 @@
     @media(min-width: 1400px) {
         display: flex;
         justify-content: space-between;
-        gap: 69px;
         padding: 83px 19px 214px;
     }
 
@@ -47,11 +46,13 @@
 .title {
     font-size: 30px;
     font-weight: 600;
-    line-height: 35.55px;
 
     @media(min-width: 1400px) {
+        font-size: 40px;
+    }
+
+    @media(min-width: 1920px) {
         font-size: 45px;
-        line-height: 53.33px;
     }
 }
 
@@ -102,7 +103,7 @@
         font-size: 15px;
         font-weight: 400;
 
-        @media(min-width: 1920px) {
+        @media(min-width: 1400px) {
             font-size: 45px;
             font-weight: 300;
         }

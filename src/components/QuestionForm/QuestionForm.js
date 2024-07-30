@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './QuestionForm.module.scss'
 import { Checkbox, Input } from 'antd';
 import Link from 'next/link';
+import ButtonDefault from '../ButtonDefault/ButtonDefault';
 
 
 
@@ -25,8 +26,7 @@ export default function QuestionForm() {
                     <div className={styles.input_label}>Телефон</div>
                     <Input value={'+7 ('}></Input>
                 </div>
-                <button className={styles.btn}>Получить консультацию</button>
-
+                <ButtonDefault className={styles.btn}>Получить консультацию</ButtonDefault>
             </div>
             <Checkbox><span className={styles.checkbox}>Я принимаю условия <Link href={""} className={styles.checkbox}>политики конфиденциальности</Link></span></Checkbox>
         </div>

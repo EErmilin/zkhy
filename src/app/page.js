@@ -16,6 +16,7 @@ import services1Icon from "../assets/svg/services/services1.svg";
 import services2Icon from "../assets/svg/services/services2.svg";
 import services3Icon from "../assets/svg/services/services3.svg";
 import Metro from "@/components/Regions/Metro";
+import ButtonDefault from "../components/ButtonDefault/ButtonDefault";
 
 const prices = [
   {
@@ -56,7 +57,7 @@ export default function Home() {
           <div className={styles.price_items_item_label}>{item.label}</div>
           <div className={styles.price_items_item_sum}>{key === 3 ? '' : 'от'} <span>{item.sum} ₽</span></div>
         </div>
-        <button>Заказать</button>
+        <ButtonDefault>Заказать</ButtonDefault>
       </div>
     </div>)
   }
@@ -93,7 +94,7 @@ export default function Home() {
       <div className={styles.container}>
         <div className={styles.certificates_wrp}>
           <div className={styles.certificates}>
-            <h3>Сертификаты</h3>
+            <h2>Сертификаты</h2>
             <p className={styles.certificates_text}>ЖКХ «Управление» оказывает услуги по установке, поверке, замене и обслуживанию счетчиков воды, а также выполняет широкий спектр сантехнических работ. Работая с 2016 года в Москве мы накопили бесценный опыт решения задач любой сложности, укомплектовали штат лучшими мастерами, выработали четкую ценовую политику.</p>
             <div className={styles.discount}>
               <Image src={cardIcon} width={327} />
@@ -102,7 +103,7 @@ export default function Home() {
                   <div className={styles.discount_sub_title}>на замену счетчиков воды</div>
                 </div>
                 <div className={styles.discount_text}>Скидка предоставляется обладателям социальной карты москвича</div>
-                <button>Получить скидку</button>
+                <ButtonDefault>Получить скидку</ButtonDefault>
               </div>
             </div>
 
@@ -125,7 +126,7 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <h3>Услуги</h3>
+          <h2>Услуги</h2>
           <div className={styles.certificate}>
             <div>Наша организация аккредитована в Росаккредитации</div>
             <div className={styles.certificate_number}>Аттестат аккредитации <span>RA.RU.000000</span></div>

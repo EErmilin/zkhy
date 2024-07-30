@@ -13,6 +13,7 @@ import cnt10 from '../../assets/img/cnt/cnt10.png'
 import cnt11 from '../../assets/img/cnt/cnt11.png'
 import cnt12 from '../../assets/img/cnt/cnt12.png'
 import Image from 'next/image'
+import ButtonDefault from '../ButtonDefault/ButtonDefault'
 
 const stamps = [
   {
@@ -103,7 +104,7 @@ export default function Counters({ type }) {
         <div className={styles.counters_item_price}>от <b>{item.price}</b> рублей</div>
         {type === 'replacement' && <div className={styles.counters_item_price_old}>от {item.oldPrice} рублей</div>}
       </div>
-      <button className={styles.counters_item_btn}>{type !== 'verification' ? 'Заказать замену' : 'Заказать поверку'}</button>
+      <ButtonDefault className={styles.counters_item_btn}>{type !== 'verification' ? 'Заказать замену' : 'Заказать поверку'}</ButtonDefault>
     </div>)
   }
 

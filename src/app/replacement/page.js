@@ -13,6 +13,7 @@ import counterHeatIcon from "../../assets/svg/counter-heat.svg";
 import counterWaterIcon from "../../assets/svg/counter-water.svg";
 import Form from "@/components/Form/Form";
 import Counters from "@/components/Counters/Counters";
+import ButtonDefault from "../../components/ButtonDefault/ButtonDefault";
 
 
 export default function Home() {
@@ -140,7 +141,7 @@ export default function Home() {
                   <div className={styles.price_sum}>от <span>400</span> <span>₽</span></div>
                 </div>
               </div>
-              <button className={styles.price_btn}>Заказать</button>
+              <ButtonDefault className={styles.price_btn}>Заказать</ButtonDefault>
             </div>
             <div className={styles.price_item}>
               <div className={styles.price_item_text}>
@@ -150,7 +151,7 @@ export default function Home() {
                   <div className={styles.price_sum}><span>3 700</span> <span>₽</span></div>
                 </div>
               </div>
-              <button className={styles.price_btn}>Заказать</button>
+              <ButtonDefault className={styles.price_btn}>Заказать</ButtonDefault>
             </div>
           </div>
         </div>
